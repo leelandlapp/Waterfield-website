@@ -45,25 +45,19 @@
     background-color: #ffd700;
     color: #800000;
   }
-
-  /* Dropdown container */
   .dropdown {
     position: relative;
     display: inline-block;
   }
-
-  /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #800000;
     min-width: 200px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 100;
     flex-direction: column;
   }
-
-  /* Dropdown links */
   .dropdown-content a {
     color: #ffd700;
     padding: 12px 20px;
@@ -72,17 +66,13 @@
     font-weight: normal;
     font-family: 'Arial Black', sans-serif;
   }
-
   .dropdown-content a:hover {
     background-color: #ffd700;
     color: #800000;
   }
-
-  /* Show dropdown on hover */
   .dropdown:hover .dropdown-content {
     display: flex;
   }
-
   main {
     padding: 30px;
     max-width: 900px;
@@ -114,7 +104,6 @@
   footer a:hover {
     color: #fff3b0;
   }
-
   @media (max-width: 768px) {
     nav {
       flex-direction: column;
@@ -133,6 +122,41 @@
 
 <nav>
   <a href="index.html">Home</a>
+
+  <div class="dropdown">
+    <a href="about.html" class="dropbtn">About ▼</a>
+    <div class="dropdown-content">
+      <a href="about.html">About Waterfield</a>
+      <a href="employment.html">Employment Opportunities</a>
+    </div>
+  </div>
+
+  <a href="government.html">Government</a>
+  <a href="events.html">Events</a>
+  <a href="schools.html">Schools</a>
+  <a href="business.html">Business</a>
+  <a href="tourism.html">Tourism</a>
+  <a href="community.html">Community</a>
+  <a href="documents.html">Documents</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <h2>History & Founding</h2>
+  <p>Waterfield was founded in 1857 and incorporated as a village in 1879. Nestled in the heart of Michigan, the town grew steadily with the arrival of railroads and the establishment of local factories and farms. Our historic Waterfield High School, built in 1890, stands as a proud symbol of our commitment to education and community.</p>
+
+  <h2>Population & Community</h2>
+  <p>Today, Waterfield is home to approximately 1,400 residents who enjoy a strong sense of community and small-town charm. With thriving local businesses, vibrant festivals, and welcoming neighborhoods, Waterfield offers a perfect blend of history and modern living.</p>
+</main>
+
+<footer>
+  Contact us: <a href="mailto:info@waterfieldmi.gov">info@waterfieldmi.gov</a> | Phone: (555) 123-4567<br />
+  &copy; 2025 Waterfield, Michigan. All rights reserved.
+</footer>
+
+</body>
+</html>
+
 
   <div class="dropdown">
     <a href="about.html" class="dropbtn">About ▼</a>
