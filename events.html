@@ -21,15 +21,15 @@
     color: white;
     text-shadow: 1px 1px 2px #400000;
     width: 100%;
-box-sizing: border-box;
+    box-sizing: border-box;
   }
   nav {
     background: #800000;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-width: 100%;
-box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
   }
   nav a {
     color: #ffd700;
@@ -58,6 +58,7 @@ box-sizing: border-box;
     padding: 15px;
     margin-top: 15px;
     border-radius: 8px;
+    min-height: 80px;
   }
   label, select {
     font-weight: bold;
@@ -110,12 +111,23 @@ box-sizing: border-box;
   };
 
   function showEvents() {
-    const month = document.getElementById('monthSelect').value;
+    const month = Number(document.getElementById('monthSelect').value);
     const eventList = document.getElementById('eventList');
     eventList.innerHTML = '';
 
-    if(events[month]) {
+    if (events[month]) {
       events[month].forEach(event => {
         const p = document.createElement('p');
         p.textContent = `${event.date}: ${event.title} — ${event.location}`;
-        eventList
+        eventList.appendChild(p);
+      });
+    } else {
+      eventList.textContent = 'No events found for this month.';
+    }
+  }
+
+  // Show events for the default selected month on page load
+  window.onload = showEvents;
+</script>
+</body>
+</html>
