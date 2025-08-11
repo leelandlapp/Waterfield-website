@@ -26,7 +26,7 @@
   nav {
     background: #800000;
     display: flex;
-    justify-content: space-evenly; /* changed from center */
+    justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
@@ -55,6 +55,9 @@
     border-bottom: 3px solid #b8860b;
     padding-bottom: 5px;
   }
+  p {
+    font-size: 1.1em;
+  }
   ul {
     list-style-type: disc;
     padding-left: 20px;
@@ -71,8 +74,45 @@
   a.document-link:hover {
     color: #b8860b;
   }
+  /* Folder tree styles */
+  ul.folder, ul.folder ul {
+    list-style-type: none;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  ul.folder ul {
+    display: none; /* hide nested by default */
+  }
+  li.folder > span {
+    font-weight: bold;
+    position: relative;
+    padding-left: 20px;
+  }
+  li.folder > span::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #b8860b;
+    transition: transform 0.2s ease;
+  }
+  li.folder.expanded > span::before {
+    transform: rotate(90deg);
+  }
+  li.folder > ul {
+    margin-top: 5px;
+  }
+  li.year-folder > span {
+    font-style: italic;
+    color: #804000;
+    cursor: default;
+    padding-left: 20px;
+  }
+  li.year-folder > span:hover {
+    text-decoration: none;
+  }
 
-  /* Responsive layout for small screens */
+  /* Responsive */
   @media (max-width: 768px) {
     nav {
       flex-direction: column;
@@ -107,6 +147,147 @@
     <li><a class="document-link" href="docs/governing_system.pdf" target="_blank" rel="noopener noreferrer">Town Governing System (PDF)</a></li>
     <li><a class="document-link" href="docs/town_meeting_minutes.pdf" target="_blank" rel="noopener noreferrer">Recent Town Meeting Minutes (PDF)</a></li>
   </ul>
+
+  <h2>Folder View</h2>
+  <ul class="folder">
+
+    <!-- City of Waterfield Meeting Minutes -->
+    <li class="folder">
+      <span>City of Waterfield Meeting Minutes</span>
+      <ul>
+        <li class="folder">
+          <span>Senate Meeting Minutes</span>
+          <ul>
+            <li class="year-folder"><span>2025</span></li>
+            <li class="year-folder"><span>2026</span></li>
+          </ul>
+        </li>
+        <li class="folder">
+          <span>House Meeting Minutes</span>
+          <ul>
+            <li class="year-folder"><span>2025</span></li>
+            <li class="year-folder"><span>2026</span></li>
+          </ul>
+        </li>
+        <li class="folder">
+          <span>City Trustee Meeting Minutes</span>
+          <ul>
+            <li class="year-folder"><span>2025</span></li>
+            <li class="year-folder"><span>2026</span></li>
+          </ul>
+        </li>
+        <li class="folder">
+          <span>Fairs and Festival Meeting Minutes</span>
+          <ul>
+            <li class="year-folder"><span>2025</span></li>
+            <li class="year-folder"><span>2026</span></li>
+          </ul>
+        </li>
+        <li class="folder">
+          <span>Senate Committee Meeting Minutes</span>
+          <ul>
+            <li class="year-folder"><span>2025</span></li>
+            <li class="year-folder"><span>2026</span></li>
+          </ul>
+        </li>
+        <li class="folder">
+          <span>House Committee Meeting Minutes</span>
+          <ul>
+            <li class="year-folder"><span>2025</span></li>
+            <li class="year-folder"><span>2026</span></li>
+          </ul>
+        </li>
+        <li class="folder">
+          <span>City Trustee Committee Meeting Minutes</span>
+          <ul>
+            <li class="year-folder"><span>2025</span></li>
+            <li class="year-folder"><span>2026</span></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Town Ordinance -->
+    <li class="folder">
+      <span>Town Ordinance</span>
+      <ul>
+        <li class="year-folder"><span>2025</span></li>
+        <li class="year-folder"><span>2026</span></li>
+      </ul>
+    </li>
+
+    <!-- Town Governing System -->
+    <li class="folder">
+      <span>Town Governing System</span>
+      <ul>
+        <li class="year-folder"><span>2025</span></li>
+        <li class="year-folder"><span>2026</span></li>
+      </ul>
+    </li>
+
+    <!-- Zoning Ordinance -->
+    <li class="folder">
+      <span>Zoning Ordinance</span>
+      <ul>
+        <li class="year-folder"><span>2025</span></li>
+        <li class="year-folder"><span>2026</span></li>
+      </ul>
+    </li>
+
+    <!-- Zoning Map -->
+    <li class="folder">
+      <span>Zoning Map</span>
+      <ul>
+        <li class="year-folder"><span>2025</span></li>
+        <li class="year-folder"><span>2026</span></li>
+      </ul>
+    </li>
+
+    <!-- District Map -->
+    <li class="folder">
+      <span>District Map</span>
+      <ul>
+        <li class="folder">
+          <span>House of Representatives</span>
+          <ul>
+            <li class="year-folder"><span>2025</span></li>
+            <li class="year-folder"><span>2026</span></li>
+          </ul>
+        </li>
+        <li class="folder">
+          <span>Senate</span>
+          <ul>
+            <li class="year-folder"><span>2025</span></li>
+            <li class="year-folder"><span>2026</span></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Town Map -->
+    <li class="folder">
+      <span>Town Map</span>
+      <ul>
+        <li class="year-folder"><span>2025</span></li>
+        <li class="year-folder"><span>2026</span></li>
+      </ul>
+    </li>
+
+  </ul>
 </main>
+
+<script>
+  // Folder toggle functionality
+  document.querySelectorAll('li.folder > span').forEach(span => {
+    span.addEventListener('click', () => {
+      const li = span.parentElement;
+      li.classList.toggle('expanded');
+      const nestedUl = li.querySelector('ul');
+      if (nestedUl) {
+        nestedUl.style.display = li.classList.contains('expanded') ? 'block' : 'none';
+      }
+    });
+  });
+</script>
 </body>
 </html>
