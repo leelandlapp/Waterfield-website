@@ -11,6 +11,7 @@
     color: #800000;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   header {
     background-color: #b8860b;
@@ -20,20 +21,14 @@
     font-size: 3em;
     color: white;
     text-shadow: 1px 1px 2px #400000;
-
-    /* *** ADDED: full width & box sizing */
     width: 100%;
-    box-sizing: border-box;
   }
   nav {
     background: #800000;
     display: flex;
-    justify-content: center; /* Changed from center to space evenly */
+    justify-content: center;
     flex-wrap: wrap;
-
-    /* *** ADDED: full width & box sizing */
     width: 100%;
-    box-sizing: border-box;
   }
   nav a {
     color: #ffd700;
@@ -59,8 +54,25 @@
   p {
     line-height: 1.6;
   }
+  footer {
+    background-color: #800000;
+    color: #ffd700;
+    text-align: center;
+    padding: 15px;
+    font-family: Georgia, serif;
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.4;
+    box-sizing: border-box;
+  }
+  footer a {
+    color: #ffd700;
+    text-decoration: underline;
+  }
+  footer a:hover {
+    color: #fff3b0;
+  }
 
-  /* *** ADDED: Responsive nav and header font size */
   @media (max-width: 768px) {
     nav {
       flex-direction: column;
@@ -74,7 +86,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet" />
 </head>
 <body>
+
 <header>About Waterfield</header>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -95,8 +109,9 @@
   <h2>Population & Community</h2>
   <p>Today, Waterfield is home to approximately 1,400 residents who enjoy a strong sense of community and small-town charm. With thriving local businesses, vibrant festivals, and welcoming neighborhoods, Waterfield offers a perfect blend of history and modern living.</p>
 </main>
-<footer style="background: #800000; color: #ffd700; text-align: center; padding: 15px; font-family: 'Georgia', serif; font-size: 0.9em; margin: 0; line-height: 1.4;">
-  Contact us: <a href="mailto:info@waterfieldmi.gov" style="color:#ffd700; text-decoration: underline;">info@waterfieldmi.gov</a> | Phone: (555) 123-4567<br />
+
+<footer>
+  Contact us: <a href="mailto:info@waterfieldmi.gov">info@waterfieldmi.gov</a> | Phone: (555) 123-4567<br />
   &copy; 2025 Waterfield, Michigan. All rights reserved.
 </footer>
 
