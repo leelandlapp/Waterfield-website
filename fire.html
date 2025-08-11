@@ -27,9 +27,8 @@
     margin: auto;
     padding: 30px;
   }
-  h1 {
+  h1, h2 {
     font-family: 'Lobster', cursive;
-    font-size: 2.2em;
     color: #b8860b;
     border-bottom: 3px solid #b8860b;
     padding-bottom: 10px;
@@ -38,6 +37,32 @@
   p {
     line-height: 1.6;
     font-size: 1.1em;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+  }
+  th, td {
+    border: 1px solid #b8860b;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #b8860b;
+    color: white;
+    font-family: 'Lobster', cursive;
+  }
+  a {
+    color: #800000;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .phone-note {
+    font-size: 0.85em;
+    color: #400000;
   }
   footer {
     background: #800000;
@@ -56,12 +81,388 @@
 <header>Waterfield Government</header>
 <main>
   <h1>Waterfield Fire Department</h1>
-  <p>The Waterfield Fire Department operates as a volunteer fire service dedicated to protecting the community from fire hazards and emergency situations. Our volunteers are trained and ready to respond at any time to keep Waterfield safe.</p>
-  <p>The department provides fire prevention education, fire safety inspections, and emergency response services. Collaboration with neighboring departments ensures prompt and effective assistance when needed.</p>
-  <p>For fire safety information or to volunteer, please contact us at <a href="mailto:fire@waterfieldmi.gov">fire@waterfieldmi.gov</a> or call (555) 123-4567.</p>
+  <p>The Waterfield Fire Department is a proud volunteer department with approximately 27 dedicated firefighters serving the community. Founded in 1925, it has a long history of protecting Waterfield residents, responding to emergencies, and promoting fire safety education. Over the decades, the department has grown with new equipment and training to meet modern challenges.</p>
+
+  <h2>Contact Information</h2>
+  <p>Fire Department Non-Emergency Phone: <strong>(555) 432-3000</strong><br />
+  For emergencies, dial <strong>911</strong>.</p>
+
+  <h2>Department Leadership and Volunteers</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Role/Rank</th>
+        <th>Email</th>
+        <th>Cell Phone <br />(Non-Emergency)</th>
+        <th>Year Became Firefighter</th>
+        <th>Year Joined Waterfield FD</th>
+        <th>Bio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Leadership -->
+      <tr>
+        <td>Michael J. Donovan</td>
+        <td>Fire Chief</td>
+        <td><a href="mailto:mdonovan@waterfieldmi.gov">mdonovan@waterfieldmi.gov</a></td>
+        <td>(555) 432-3101<br /><span class="phone-note">For emergencies, dial 911.</span></td>
+        <td>1988</td>
+        <td>1990</td>
+        <td>Chief Donovan has led the department since 2010. He began his firefighting career in 1988 and joined Waterfield FD two years later. He emphasizes training and community outreach.</td>
+      </tr>
+      <tr>
+        <td>Jessica N. White</td>
+        <td>Deputy Chief</td>
+        <td><a href="mailto:jwhite@waterfieldmi.gov">jwhite@waterfieldmi.gov</a></td>
+        <td>(555) 432-3102<br /><span class="phone-note">For emergencies, dial 911.</span></td>
+        <td>1995</td>
+        <td>2000</td>
+        <td>Deputy Chief White oversees training and operations. She joined Waterfield FD after five years as a firefighter in a neighboring town.</td>
+      </tr>
+      <tr>
+        <td>Robert T. Scott</td>
+        <td>Captain</td>
+        <td><a href="mailto:rscott@waterfieldmi.gov">rscott@waterfieldmi.gov</a></td>
+        <td>(555) 432-3103<br /><span class="phone-note">For emergencies, dial 911.</span></td>
+        <td>2003</td>
+        <td>2005</td>
+        <td>Captain Scott leads first response teams and maintains equipment readiness.</td>
+      </tr>
+      <tr>
+        <td>Angela S. Clark</td>
+        <td>Lieutenant</td>
+        <td><a href="mailto:aclark@waterfieldmi.gov">aclark@waterfieldmi.gov</a></td>
+        <td>(555) 432-3104<br /><span class="phone-note">For emergencies, dial 911.</span></td>
+        <td>2007</td>
+        <td>2010</td>
+        <td>Lieutenant Clark coordinates volunteer scheduling and community safety programs.</td>
+      </tr>
+
+      <!-- Volunteers (27) -->
+      <tr>
+        <td>James A. Lee</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:jlee@waterfieldmi.gov">jlee@waterfieldmi.gov</a></td>
+        <td>(555) 432-3201</td>
+        <td>2012</td>
+        <td>2013</td>
+        <td>James has been an active volunteer focused on wildfire response and community education.</td>
+      </tr>
+      <tr>
+        <td>Patricia N. O’Brien</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:porbrien@waterfieldmi.gov">porbrien@waterfieldmi.gov</a></td>
+        <td>(555) 432-3202</td>
+        <td>2015</td>
+        <td>2016</td>
+        <td>Patricia brings experience from a neighboring department and specializes in rescue operations.</td>
+      </tr>
+      <tr>
+        <td>Thomas J. Miller</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:tmiller@waterfieldmi.gov">tmiller@waterfieldmi.gov</a></td>
+        <td>(555) 432-3203</td>
+        <td>2009</td>
+        <td>2010</td>
+        <td>Thomas is skilled in hazardous materials handling and has served in the department for over a decade.</td>
+      </tr>
+      <tr>
+        <td>Maria L. Sanchez</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:msanchez@waterfieldmi.gov">msanchez@waterfieldmi.gov</a></td>
+        <td>(555) 432-3204</td>
+        <td>2013</td>
+        <td>2014</td>
+        <td>Maria is actively involved in public safety outreach and training programs.</td>
+      </tr>
+      <tr>
+        <td>David P. Collins</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:dcollins@waterfieldmi.gov">dcollins@waterfieldmi.gov</a></td>
+        <td>(555) 432-3205</td>
+        <td>2011</td>
+        <td>2012</td>
+        <td>David specializes in vehicle extrication and technical rescues.</td>
+      </tr>
+      <tr>
+        <td>Angela R. Brown</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:abrown@waterfieldmi.gov">abrown@waterfieldmi.gov</a></td>
+        <td>(555) 432-3206</td>
+        <td>2010</td>
+        <td>2011</td>
+        <td>Angela has been a vital part of the volunteer team focusing on fire prevention education.</td>
+      </tr>
+      <tr>
+        <td>Steven K. Wright</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:swright@waterfieldmi.gov">swright@waterfieldmi.gov</a></td>
+        <td>(555) 432-3207</td>
+        <td>2014</td>
+        <td>2015</td>
+        <td>Steven specializes in water rescue and flood response operations.</td>
+      </tr>
+      <tr>
+        <td>Linda M. Gomez</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:lgomez@waterfieldmi.gov">lgomez@waterfieldmi.gov</a></td>
+        <td>(555) 432-3208</td>
+        <td>2012</td>
+        <td>2013</td>
+        <td>Linda supports the department with first aid and community outreach programs.</td>
+      </tr>
+      <tr>
+        <td>James R. Porter</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:jporter@waterfieldmi.gov">jporter@waterfieldmi.gov</a></td>
+        <td>(555) 432-3209</td>
+        <td>2008</td>
+        <td>2009</td>
+        <td>James is an experienced firefighter specializing in wildland firefighting techniques.</td>
+      </tr>
+      <tr>
+        <td>Patricia M. Reynolds</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:preynolds@waterfieldmi.gov">preynolds@waterfieldmi.gov</a></td>
+        <td>(555) 432-3210</td>
+        <td>2016</td>
+        <td>2017</td>
+        <td>Patricia is passionate about fire safety training and youth engagement programs.</td>
+      </tr>
+      <tr>
+        <td>Robert C. Foster</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:rfoster@waterfieldmi.gov">rfoster@waterfieldmi.gov</a></td>
+        <td>(555) 432-3211</td>
+        <td>2013</td>
+        <td>2014</td>
+        <td>Robert focuses on hazardous materials and fire investigation support.</td>
+      </tr>
+      <tr>
+        <td>Mary L. Patterson</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:mpatterson@waterfieldmi.gov">mpatterson@waterfieldmi.gov</a></td>
+        <td>(555) 432-3212</td>
+        <td>2011</td>
+        <td>2012</td>
+        <td>Mary coordinates community safety workshops and public fire education.</td>
+      </tr>
+      <tr>
+        <td>Steven A. Murphy</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:smurphy@waterfieldmi.gov">smurphy@waterfieldmi.gov</a></td>
+        <td>(555) 432-3213</td>
+        <td>2007</td>
+        <td>2008</td>
+        <td>Steven is a senior volunteer with expertise in fire suppression tactics.</td>
+      </tr>
+      <tr>
+        <td>Jennifer M. Howard</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:jhoward@waterfieldmi.gov">jhoward@waterfieldmi.gov</a></td>
+        <td>(555) 432-3214</td>
+        <td>2014</td>
+        <td>2015</td>
+        <td>Jennifer is involved with youth fire safety programs and event coordination.</td>
+      </tr>
+      <tr>
+        <td>Charles D. Simmons</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:csimmons@waterfieldmi.gov">csimmons@waterfieldmi.gov</a></td>
+        <td>(555) 432-3215</td>
+        <td>2010</td>
+        <td>2011</td>
+        <td>Charles assists with equipment maintenance and safety inspections.</td>
+      </tr>
+      <tr>
+        <td>Barbara J. Turner</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:bturner@waterfieldmi.gov">bturner@waterfieldmi.gov</a></td>
+        <td>(555) 432-3216</td>
+        <td>2015</td>
+        <td>2016</td>
+        <td>Barbara provides support for emergency medical response and community events.</td>
+      </tr>
+      <tr>
+        <td>Gregory T. Barnes</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:gbarnes@waterfieldmi.gov">gbarnes@waterfieldmi.gov</a></td>
+        <td>(555) 432-3217</td>
+        <td>2009</td>
+        <td>2010</td>
+        <td>Gregory specializes in structural firefighting and rapid response tactics.</td>
+      </tr>
+      <tr>
+        <td>Sharon E. Martin</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:smartin@waterfieldmi.gov">smartin@waterfieldmi.gov</a></td>
+        <td>(555) 432-3218</td>
+        <td>2013</td>
+        <td>2014</td>
+        <td>Sharon leads community preparedness drills and public safety workshops.</td>
+      </tr>
+      <tr>
+        <td>Patrick R. Young</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:pyoung@waterfieldmi.gov">pyoung@waterfieldmi.gov</a></td>
+        <td>(555) 432-3219</td>
+        <td>2011</td>
+        <td>2012</td>
+        <td>Patrick is trained in technical rescue and hazardous material response.</td>
+      </tr>
+      <tr>
+        <td>Elizabeth F. Howard</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:ehoward@waterfieldmi.gov">ehoward@waterfieldmi.gov</a></td>
+        <td>(555) 432-3220</td>
+        <td>2010</td>
+        <td>2011</td>
+        <td>Elizabeth coordinates fire prevention education and youth engagement activities.</td>
+      </tr>
+      <tr>
+        <td>Daniel J. Lewis</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:dlewis@waterfieldmi.gov">dlewis@waterfieldmi.gov</a></td>
+        <td>(555) 432-3221</td>
+        <td>2008</td>
+        <td>2009</td>
+        <td>Daniel has expertise in wildland firefighting and emergency medical support.</td>
+      </tr>
+      <tr>
+        <td>Karen M. Bryant</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:kbryant@waterfieldmi.gov">kbryant@waterfieldmi.gov</a></td>
+        <td>(555) 432-3222</td>
+        <td>2016</td>
+        <td>2017</td>
+        <td>Karen actively promotes fire safety awareness and community outreach.</td>
+      </tr>
+      <tr>
+        <td>Matthew A. Green</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:mgreen@waterfieldmi.gov">mgreen@waterfieldmi.gov</a></td>
+        <td>(555) 432-3223</td>
+        <td>2012</td>
+        <td>2013</td>
+        <td>Matthew is skilled in vehicle extrication and fire suppression techniques.</td>
+      </tr>
+      <tr>
+        <td>Rebecca J. Collins</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:rcollins@waterfieldmi.gov">rcollins@waterfieldmi.gov</a></td>
+        <td>(555) 432-3224</td>
+        <td>2014</td>
+        <td>2015</td>
+        <td>Rebecca supports training programs and community safety events.</td>
+      </tr>
+      <tr>
+        <td>Joshua D. Turner</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:jturner@waterfieldmi.gov">jturner@waterfieldmi.gov</a></td>
+        <td>(555) 432-3225</td>
+        <td>2010</td>
+        <td>2011</td>
+        <td>Joshua is involved with equipment maintenance and emergency response drills.</td>
+      </tr>
+      <tr>
+        <td>Melissa K. Hayes</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:mhayes@waterfieldmi.gov">mhayes@waterfieldmi.gov</a></td>
+        <td>(555) 432-3226</td>
+        <td>2013</td>
+        <td>2014</td>
+        <td>Melissa participates actively in community outreach and fire prevention education.</td>
+      </tr>
+      <tr>
+        <td>Eric L. Foster</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:efoster@waterfieldmi.gov">efoster@waterfieldmi.gov</a></td>
+        <td>(555) 432-3227</td>
+        <td>2009</td>
+        <td>2010</td>
+        <td>Eric specializes in water rescue and rapid deployment operations.</td>
+      </tr>
+      <tr>
+        <td>Nicole A. Reed</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:nreed@waterfieldmi.gov">nreed@waterfieldmi.gov</a></td>
+        <td>(555) 432-3228</td>
+        <td>2015</td>
+        <td>2016</td>
+        <td>Nicole focuses on first aid and community health education programs.</td>
+      </tr>
+      <tr>
+        <td>Benjamin T. Ward</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:bward@waterfieldmi.gov">bward@waterfieldmi.gov</a></td>
+        <td>(555) 432-3229</td>
+        <td>2011</td>
+        <td>2012</td>
+        <td>Benjamin is a dedicated volunteer involved in technical rescue and training.</td>
+      </tr>
+      <tr>
+        <td>Stephanie C. Brooks</td>
+        <td>Volunteer Firefighter</td>
+        <td><a href="mailto:scbrooks@waterfieldmi.gov">scbrooks@waterfieldmi.gov</a></td>
+        <td>(555) 432-3230</td>
+        <td>2016</td>
+        <td>2017</td>
+        <td>Stephanie actively promotes fire safety in schools and public events.</td>
+      </tr>
+    </tbody>
+  </table>
+
+<h2>Fire Department Equipment</h2>
+<table>
+  <tr>
+    <th>Equipment</th>
+    <th>Description</th>
+    <th>Purchased Year</th>
+  </tr>
+  <tr>
+    <td>Fire Engine 1</td>
+    <td>A pumper truck with a 1,000-gallon water tank, equipped for firefighting and rescue operations. It serves as the primary response vehicle for structural fires.</td>
+    <td>2015</td>
+  </tr>
+  <tr>
+    <td>Fire Engine 2</td>
+    <td>Backup engine with a 750-gallon water tank, capable of rapid deployment and equipped with advanced hoses and ladders.</td>
+    <td>2018</td>
+  </tr>
+  <tr>
+    <td>Water Tanker Truck</td>
+    <td>A large tanker truck designed to transport and supply water to fire scenes where hydrants are unavailable. It holds up to 2,500 gallons of water and supports extended firefighting operations.</td>
+    <td>2017</td>
+  </tr>
+  <tr>
+    <td>ATV</td>
+    <td>All-Terrain Vehicle used for accessing difficult terrain and wildland fires, equipped with water tanks and firefighting tools.</td>
+    <td>2019</td>
+  </tr>
+  <tr>
+    <td>Fire Pick Truck</td>
+    <td>Utility pickup truck outfitted with firefighting and rescue equipment, ideal for support and rapid response.</td>
+    <td>2016</td>
+  </tr>
+  <tr>
+    <td>Jaws of Life Vehicle</td>
+    <td>Specialized vehicle carrying hydraulic rescue tools used in vehicle extrication and technical rescues.</td>
+    <td>2014</td>
+  </tr>
+  <tr>
+    <td>Fire Panel Van</td>
+    <td>Command and equipment van containing communication systems, protective gear, and specialized firefighting tools.</td>
+    <td>2020</td>
+  </tr>
+</table>
+
+
+
 </main>
 <footer>
-  Contact us: <a href="mailto:info@waterfieldmi.gov" style="color:#ffd700; text-decoration: underline;">info@waterfieldmi.gov</a> | Phone: (555) 123-4567<br />
+  Contact us: <a href="mailto:info@waterfieldmi.gov" style="color:#ffd700; text-decoration: underline;">info@waterfieldmi.gov</a> | Fire Dept Non-Emergency: (555) 432-3000<br />
+  For emergencies, dial <strong>911</strong>.<br />
   &copy; 2025 Waterfield, Michigan. All rights reserved.
 </footer>
 </body>
