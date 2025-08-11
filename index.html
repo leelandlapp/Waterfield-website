@@ -21,16 +21,15 @@
     color: white;
     text-shadow: 1px 1px 2px #400000;
     width: 100%;
-box-sizing: border-box;
+    box-sizing: border-box;
   }
   nav {
     background: #800000;
     display: flex;
     justify-content: center;
-
     flex-wrap: wrap;
-width: 100%;
-box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
   }
   nav a {
     color: #ffd700;
@@ -43,6 +42,13 @@ box-sizing: border-box;
     background-color: #ffd700;
     color: #800000;
   }
+  .banner {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
   main {
     padding: 30px;
     max-width: 900px;
@@ -52,6 +58,7 @@ box-sizing: border-box;
     font-family: 'Lobster', cursive;
     font-size: 2em;
     color: #b8860b;
+    margin-top: 1.5em;
   }
   .event-list {
     background-color: #fff0b3;
@@ -60,12 +67,30 @@ box-sizing: border-box;
     margin-top: 15px;
     border-radius: 8px;
   }
+  .event-list a {
+    color: #800000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .event-list a:hover {
+    text-decoration: underline;
+    color: #b8860b;
+  }
+  footer {
+    background-color: #800000;
+    color: #ffd700;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9em;
+    margin-top: 40px;
+  }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet" />
 </head>
 <body>
-<header>Welcome to Waterfield, Michigan</header>
-<nav>
+<header role="banner">Welcome to Waterfield, Michigan</header>
+
+<nav role="navigation" aria-label="Main navigation">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="government.html">Government</a>
@@ -78,16 +103,28 @@ box-sizing: border-box;
   <a href="contact.html">Contact</a>
 </nav>
 
-<main>
-  <h2>Upcoming Events</h2>
-  <div class="event-list">
-    <p><strong>Aug 15:</strong> Waterfield Harvest Festival — Downtown Square</p>
-    <p><strong>Sep 10:</strong> Annual Parade & Classic Car Show</p>
-    <p><strong>Oct 31:</strong> Halloween Dance at the Community Hall</p>
-  </div>
+<!-- Replace this src with your own banner image URL -->
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Waterfield town banner" class="banner" />
 
-  <h2>About Waterfield</h2>
-  <p>Founded in 1857, Waterfield is a charming small town with a rich history and friendly community. From our historic schoolhouse to vibrant local festivals, Waterfield embodies the spirit of the 1950s Americana.</p>
+<main role="main">
+  <section aria-labelledby="upcoming-events">
+    <h2 id="upcoming-events">Upcoming Events</h2>
+    <div class="event-list">
+      <p><strong>Aug 15:</strong> <a href="events.html#aug15">Waterfield Harvest Festival</a> — Downtown Square</p>
+      <p><strong>Sep 10:</strong> <a href="events.html#sep10">Annual Parade & Classic Car Show</a></p>
+      <p><strong>Oct 31:</strong> <a href="events.html#oct31">Halloween Dance</a> at the Community Hall</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="about-waterfield">
+    <h2 id="about-waterfield">About Waterfield</h2>
+    <p>Founded in 1857, Waterfield is a charming small town with a rich history and friendly community. From our historic schoolhouse to vibrant local festivals, Waterfield embodies the spirit of 1950s Americana.</p>
+  </section>
 </main>
+
+<footer role="contentinfo">
+  <p>Contact us: <a href="mailto:info@waterfieldmi.gov" style="color:#ffd700;">info@waterfieldmi.gov</a> | Phone: (555) 123-4567</p>
+  <p>&copy; 2025 Waterfield, Michigan. All rights reserved.</p>
+</footer>
 </body>
 </html>
