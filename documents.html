@@ -1,4 +1,4 @@
-            <!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -20,16 +20,12 @@
     font-size: 3em;
     color: white;
     text-shadow: 1px 1px 2px #400000;
-    width: 100%;
-    box-sizing: border-box;
   }
   nav {
     background: #800000;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100%;
-    box-sizing: border-box;
   }
   nav a {
     color: #ffd700;
@@ -64,9 +60,6 @@
     font-size: 1.1em;
     cursor: pointer;
   }
-  li span {
-    user-select: none;
-  }
   .folder > ul {
     margin-left: 20px;
     display: none;
@@ -83,6 +76,20 @@
   }
   .folder.open > span::before {
     content: "▼ ";
+  }
+  a.document-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #ffd700;
+    color: #800000;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  a.document-link:hover {
+    background: #800000;
+    color: #ffd700;
   }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet" />
@@ -103,57 +110,55 @@
 </nav>
 <main>
   <h2>Town Documents</h2>
-  <p>Below you can explore folders with Waterfield’s official documents organized by category and year.</p>
 
-  <ul class="folder">
+  <!-- Meeting Schedule PDF Link -->
+  <p>
+    <a class="document-link" href="docs/2025-2026_City_of_Waterfield_City_Hall_Meeting_Schedule.pdf" target="_blank">
+      📄 2025–2026 City of Waterfield City Hall Meeting Schedule (PDF)
+    </a>
+  </p>
 
-    <li class="folder">
-      <span>City of Waterfield Meeting Minutes</span>
+  <!-- Folder Structure -->
+  <ul>
+    <li class="folder"><span>City of Waterfield Meeting Minutes</span>
       <ul>
-        <li class="folder">
-          <span>Senate Meeting Minutes</span>
+        <li class="folder"><span>Senate Meeting Minutes</span>
           <ul>
             <li>2025</li>
             <li>2026</li>
           </ul>
         </li>
-        <li class="folder">
-          <span>House Meeting Minutes</span>
+        <li class="folder"><span>House Meeting Minutes</span>
           <ul>
             <li>2025</li>
             <li>2026</li>
           </ul>
         </li>
-        <li class="folder">
-          <span>City Trustee Meeting Minutes</span>
+        <li class="folder"><span>City Trustee Meeting Minutes</span>
           <ul>
             <li>2025</li>
             <li>2026</li>
           </ul>
         </li>
-        <li class="folder">
-          <span>Fairs and Festival Meeting Minutes</span>
+        <li class="folder"><span>Fairs and Festival Meeting Minutes</span>
           <ul>
             <li>2025</li>
             <li>2026</li>
           </ul>
         </li>
-        <li class="folder">
-          <span>Senate Committee Meeting Minutes</span>
+        <li class="folder"><span>Senate Committee Meeting Minutes</span>
           <ul>
             <li>2025</li>
             <li>2026</li>
           </ul>
         </li>
-        <li class="folder">
-          <span>House Committee Meeting Minutes</span>
+        <li class="folder"><span>House Committee Meeting Minutes</span>
           <ul>
             <li>2025</li>
             <li>2026</li>
           </ul>
         </li>
-        <li class="folder">
-          <span>City Trustee Committee Meeting Minutes</span>
+        <li class="folder"><span>City Trustee Committee Meeting Minutes</span>
           <ul>
             <li>2025</li>
             <li>2026</li>
@@ -162,75 +167,24 @@
       </ul>
     </li>
 
-    <li class="folder">
-      <span>Town Ordinance</span>
+    <li class="folder"><span>Town Ordinance</span></li>
+    <li class="folder"><span>Town Governing System</span></li>
+    <li class="folder"><span>Zoning Ordinance</span></li>
+    <li class="folder"><span>Zoning Map</span></li>
+    <li class="folder"><span>District Map</span>
       <ul>
-        <li>2025</li>
-        <li>2026</li>
+        <li class="folder"><span>House of Representatives</span></li>
+        <li class="folder"><span>Senate</span></li>
       </ul>
     </li>
-
-    <li class="folder">
-      <span>Town Governing System</span>
-      <ul>
-        <li>2025</li>
-        <li>2026</li>
-      </ul>
-    </li>
-
-    <li class="folder">
-      <span>Zoning Ordinance</span>
-      <ul>
-        <li>2025</li>
-        <li>2026</li>
-      </ul>
-    </li>
-
-    <li class="folder">
-      <span>Zoning Map</span>
-      <ul>
-        <li>2025</li>
-        <li>2026</li>
-      </ul>
-    </li>
-
-    <li class="folder">
-      <span>District Map</span>
-      <ul>
-        <li class="folder">
-          <span>House of Representatives</span>
-          <ul>
-            <li>2025</li>
-            <li>2026</li>
-          </ul>
-        </li>
-        <li class="folder">
-          <span>Senate</span>
-          <ul>
-            <li>2025</li>
-            <li>2026</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-
-    <li class="folder">
-      <span>Town Map</span>
-      <ul>
-        <li>2025</li>
-        <li>2026</li>
-      </ul>
-    </li>
-
+    <li class="folder"><span>Town Map</span></li>
   </ul>
 </main>
 
 <script>
-  // Add toggle functionality for folders
   document.querySelectorAll('.folder > span').forEach(span => {
     span.addEventListener('click', () => {
-      const parentLi = span.parentElement;
-      parentLi.classList.toggle('open');
+      span.parentElement.classList.toggle('open');
     });
   });
 </script>
