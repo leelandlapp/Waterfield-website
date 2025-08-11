@@ -27,17 +27,36 @@
     margin: auto;
     padding: 30px;
   }
-  h1 {
+  h1, h2 {
     font-family: 'Lobster', cursive;
-    font-size: 2.2em;
     color: #b8860b;
     border-bottom: 3px solid #b8860b;
     padding-bottom: 10px;
     margin-bottom: 20px;
   }
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+  }
   p {
     line-height: 1.6;
     font-size: 1.1em;
+  }
+  .member {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b8860b;
+  }
+  .member h3 {
+    margin: 0 0 5px 0;
+    font-family: 'Arial Black', sans-serif;
+    color: #800000;
+  }
+  .member p {
+    margin: 3px 0;
   }
   footer {
     background: #800000;
@@ -49,6 +68,13 @@
     margin: 0;
     line-height: 1.4;
   }
+  a {
+    color: #b8860b;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #800000;
+  }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet" />
 </head>
@@ -59,6 +85,65 @@
   <p>The Waterfield Fairgrounds serve as the central location for community events, fairs, and festivals throughout the year. The department manages the scheduling, maintenance, and facilities to ensure a safe and welcoming environment for residents and visitors alike.</p>
   <p>The Fairgrounds include ample parking, outdoor event spaces, exhibition halls, and amenities to accommodate a wide variety of activities. Coordination with local organizations helps to bring diverse events to the village.</p>
   <p>For reservations, event planning, or more information, please contact the Fairgrounds Department at <a href="mailto:fairgrounds@waterfieldmi.gov">fairgrounds@waterfieldmi.gov</a> or call (555) 123-4567.</p>
+
+  <h2>Fairgrounds Committee Members</h2>
+
+  <div class="member">
+    <h3>John L. Mason</h3>
+    <p><strong>Bio:</strong> John has extensive experience in facility management and has been instrumental in modernizing fairground infrastructure.</p>
+    <p><strong>Email:</strong> <a href="mailto:john.mason@waterfieldmi.gov">john.mason@waterfieldmi.gov</a></p>
+    <p><strong>Cell (non-emergency):</strong> (555) 234-5678</p>
+  </div>
+
+  <div class="member">
+    <h3>Elizabeth R. Green</h3>
+    <p><strong>Bio:</strong> Elizabeth is passionate about community events and has coordinated many successful fairs and festivals in Waterfield.</p>
+    <p><strong>Email:</strong> <a href="mailto:elizabeth.green@waterfieldmi.gov">elizabeth.green@waterfieldmi.gov</a></p>
+    <p><strong>Cell (non-emergency):</strong> (555) 345-6789</p>
+  </div>
+
+  <div class="member">
+    <h3>William T. Foster</h3>
+    <p><strong>Bio:</strong> William brings years of experience in event planning and public safety coordination to the committee.</p>
+    <p><strong>Email:</strong> <a href="mailto:william.foster@waterfieldmi.gov">william.foster@waterfieldmi.gov</a></p>
+    <p><strong>Cell (non-emergency):</strong> (555) 456-7890</p>
+  </div>
+
+  <div class="member">
+    <h3>Susan K. Grant</h3>
+    <p><strong>Bio:</strong> Susan has a background in marketing and communications, helping promote Waterfield’s events regionally.</p>
+    <p><strong>Email:</strong> <a href="mailto:susan.grant@waterfieldmi.gov">susan.grant@waterfieldmi.gov</a></p>
+    <p><strong>Cell (non-emergency):</strong> (555) 567-8901</p>
+  </div>
+
+  <div class="member">
+    <h3>James R. Porter</h3>
+    <p><strong>Bio:</strong> James focuses on vendor relations and logistical support for fairs and festivals in the city.</p>
+    <p><strong>Email:</strong> <a href="mailto:james.porter@waterfieldmi.gov">james.porter@waterfieldmi.gov</a></p>
+    <p><strong>Cell (non-emergency):</strong> (555) 678-9012</p>
+  </div>
+
+  <div class="member">
+    <h3>Karen M. Lewis</h3>
+    <p><strong>Bio:</strong> Karen is committed to ensuring accessibility and inclusion at all community events.</p>
+    <p><strong>Email:</strong> <a href="mailto:karen.lewis@waterfieldmi.gov">karen.lewis@waterfieldmi.gov</a></p>
+    <p><strong>Cell (non-emergency):</strong> (555) 789-0123</p>
+  </div>
+
+  <div class="member">
+    <h3>Michael A. Turner</h3>
+    <p><strong>Bio:</strong> Michael oversees the technical setup and electrical needs for events held at the fairgrounds.</p>
+    <p><strong>Email:</strong> <a href="mailto:michael.turner@waterfieldmi.gov">michael.turner@waterfieldmi.gov</a></p>
+    <p><strong>Cell (non-emergency):</strong> (555) 890-1234</p>
+  </div>
+
+  <div class="member">
+    <h3>Linda B. Harris</h3>
+    <p><strong>Bio:</strong> Linda manages volunteer coordination and community outreach for the fairgrounds department.</p>
+    <p><strong>Email:</strong> <a href="mailto:linda.harris@waterfieldmi.gov">linda.harris@waterfieldmi.gov</a></p>
+    <p><strong>Cell (non-emergency):</strong> (555) 901-2345</p>
+  </div>
+
 </main>
 <footer>
   Contact us: <a href="mailto:info@waterfieldmi.gov" style="color:#ffd700; text-decoration: underline;">info@waterfieldmi.gov</a> | Phone: (555) 123-4567<br />
