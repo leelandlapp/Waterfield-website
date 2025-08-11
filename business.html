@@ -5,16 +5,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Business in Waterfield</title>
 <style>
-  body { font-family: Georgia, serif; background-color: #fff8e1; color: #800000; margin:0; padding:0; }
-  header { background: #b8860b; padding:20px; text-align:center; font-family:'Pacifico', cursive; font-size:3em; color:white; text-shadow:1px 1px 2px #400000;width: 100%;
-box-sizing: border-box; }
-  nav { background:#800000; display:flex; justify-content:center; flex-wrap: wrap;
-width: 100%;
-box-sizing: border-box;}
-  nav a { color:#ffd700; padding:15px 25px; text-decoration:none; font-weight:bold; font-family:'Arial Black', sans-serif; }
-  nav a:hover { background:#ffd700; color:#800000; }
-  main { padding:30px; max-width:900px; margin:auto; }
-  h2 { font-family: 'Lobster', cursive; font-size: 2em; color:#b8860b; }
+  body {
+    font-family: Georgia, serif;
+    background-color: #fff8e1;
+    color: #800000;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: #b8860b;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: white;
+    text-shadow: 1px 1px 2px #400000;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  nav {
+    background: #800000;
+    display: flex;
+    justify-content: space-evenly; /* better spacing */
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  nav a {
+    color: #ffd700;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+  }
+  nav a:hover {
+    background: #ffd700;
+    color: #800000;
+  }
+  main {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+  }
+  h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: #b8860b;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      font-size: 2.5em;
+    }
+  }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet" />
 </head>
@@ -28,6 +76,13 @@ box-sizing: border-box;}
   <a href="schools.html">Schools</a>
   <a href="business.html">Business</a>
   <a href="tourism.html">Tourism</a>
-  <a href="community.html">Community</
+  <a href="community.html">Community</a> <!-- fixed missing closing tag -->
   <a href="documents.html">Documents</a>
   <a href="contact.html">Contact</a>
+</nav>
+<main>
+  <h2>Business in Waterfield</h2>
+  <p>Waterfield boasts a diverse business community with thriving factories, local shops, and new startups. We support entrepreneurs and provide opportunities for economic growth within the village.</p>
+</main>
+</body>
+</html>
