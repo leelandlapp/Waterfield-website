@@ -29,18 +29,60 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    position: relative;
+    box-sizing: border-box;
   }
-  nav a {
+  nav a, nav .dropbtn {
     color: #ffd700;
     padding: 15px 25px;
     text-decoration: none;
     font-weight: bold;
     font-family: 'Arial Black', sans-serif;
+    cursor: pointer;
+    display: inline-block;
   }
-  nav a:hover {
+  nav a:hover, nav .dropbtn:hover {
     background-color: #ffd700;
     color: #800000;
   }
+
+  /* Dropdown container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #800000;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: column;
+  }
+
+  /* Dropdown links */
+  .dropdown-content a {
+    color: #ffd700;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    font-family: 'Arial Black', sans-serif;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ffd700;
+    color: #800000;
+  }
+
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
   main {
     padding: 30px;
     max-width: 900px;
@@ -91,7 +133,15 @@
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="about.html">About</a>
+
+  <div class="dropdown">
+    <a href="about.html" class="dropbtn">About ▼</a>
+    <div class="dropdown-content">
+      <a href="about.html">About Waterfield</a>
+      <a href="employment.html">Employment Opportunities</a>
+    </div>
+  </div>
+
   <a href="government.html">Government</a>
   <a href="events.html">Events</a>
   <a href="schools.html">Schools</a>
@@ -117,3 +167,4 @@
 
 </body>
 </html>
+
