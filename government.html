@@ -31,17 +31,89 @@
     width: 100%;
     box-sizing: border-box;
   }
-  nav a {
+  nav a, nav .dropbtn {
     color: #ffd700;
     padding: 15px 25px;
     text-decoration: none;
     font-weight: bold;
     font-family: 'Arial Black', sans-serif;
+    cursor: pointer;
   }
-  nav a:hover {
+  nav a:hover, nav .dropbtn:hover {
     background-color: #ffd700;
     color: #800000;
   }
+
+  /* Dropdown container for Government */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Main dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #800000;
+    min-width: 200px;
+    z-index: 1;
+    flex-direction: column;
+    border: 1px solid #ffd700;
+  }
+
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Style links inside dropdown */
+  .dropdown-content a {
+    color: #ffd700;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    font-family: 'Arial Black', sans-serif;
+  }
+
+  /* Hover effect for dropdown links */
+  .dropdown-content a:hover {
+    background-color: #ffd700;
+    color: #800000;
+  }
+
+  /* Submenu container */
+  .submenu {
+    position: relative;
+  }
+
+  /* Submenu content (2nd level) */
+  .submenu-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #800000;
+    min-width: 220px;
+    border: 1px solid #ffd700;
+    z-index: 2;
+    flex-direction: column;
+  }
+
+  /* Show submenu on hover */
+  .submenu:hover .submenu-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Add small arrow for submenu items */
+  .submenu > a::after {
+    content: " ▸";
+    float: right;
+    font-weight: bold;
+  }
+
   main {
     padding: 30px;
     max-width: 900px;
@@ -69,7 +141,37 @@
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
-  <a href="government.html">Government</a>
+
+  <div class="dropdown">
+    <a href="government.html" class="dropbtn">Government</a>
+    <div class="dropdown-content">
+      <div class="submenu">
+        <a href="#">City Council</a>
+        <div class="submenu-content">
+          <a href="city-trustee.html">City Trustee</a>
+          <a href="house.html">House of Representatives</a>
+          <a href="senators.html">Senators</a>
+        </div>
+      </div>
+      <div class="submenu">
+        <a href="#">City Department</a>
+        <div class="submenu-content">
+          <a href="fairs-festivals.html">Fairs and Festivals</a>
+          <a href="fairground.html">Fairground</a>
+          <a href="police.html">Police</a>
+          <a href="fire.html">Fire</a>
+          <a href="ems.html">EMS</a>
+          <a href="public-works.html">Department of Public Works</a>
+          <a href="parks-rec.html">Parks and Recreation</a>
+          <a href="water-sewer.html">Water and Sewer</a>
+          <a href="mayor-cabinet.html">Mayor Cabinet</a>
+          <a href="city-clerk.html">City Clerk</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact Information</a>
+    </div>
+  </div>
+
   <a href="events.html">Events</a>
   <a href="schools.html">Schools</a>
   <a href="business.html">Business</a>
@@ -97,10 +199,10 @@
   Phone: (555) 123-4567<br />
   Email: <a href="mailto:info@waterfieldmi.gov" title="Email Waterfield Village Hall">info@waterfieldmi.gov</a></p>
 </main>
+
 <footer style="background: #800000; color: #ffd700; text-align: center; padding: 15px; font-family: 'Georgia', serif; font-size: 0.9em; margin: 0; line-height: 1.4;">
   Contact us: <a href="mailto:info@waterfieldmi.gov" style="color:#ffd700; text-decoration: underline;">info@waterfieldmi.gov</a> | Phone: (555) 123-4567<br />
   &copy; 2025 Waterfield, Michigan. All rights reserved.
 </footer>
-
 </body>
 </html>
