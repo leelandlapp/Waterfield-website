@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Waterfield Events</title>
+<style>
+  body {
+    font-family: 'Georgia', serif;
+    background-color: #fff8e1;
+    color: #800000;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #b8860b;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: white;
+    text-shadow: 1px 1px 2px #400000;
+  }
+  nav {
+    background: #800000;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    color: #ffd700;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+  }
+  nav a:hover {
+    background-color: #ffd700;
+    color: #800000;
+  }
+  main {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+  }
+  h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: #b8860b;
+  }
+  #eventList {
+    background-color: #fff0b3;
+    border: 2px solid #b8860b;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+  label, select {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>Waterfield Events</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="government.html">Government</a>
+  <a href="events.html">Events</a>
+  <a href="schools.html">Schools</a>
+  <a href="business.html">Business</a>
+  <a href="tourism.html">Tourism</a>
+  <a href="community.html">Community</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <h2>Event Calendar</h2>
+  <label for="monthSelect">Select Month:</label>
+  <select id="monthSelect" onchange="showEvents()">
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+  </select>
+
+  <div id="eventList"></div>
+</main>
+
+<script>
+  const events = {
+    8: [
+      { date: 'Aug 15', title: 'Waterfield Harvest Festival', location: 'Downtown Square' },
+      { date: 'Aug 28', title: 'Vintage Car Cruise Night', location: 'Main Street' }
+    ],
+    9: [
+      { date: 'Sep 10', title: 'Annual Parade & Classic Car Show', location: 'City Center' },
+      { date: 'Sep 25', title: 'Waterfield Fall Fair', location: 'Fairgrounds' }
+    ],
+    10: [
+      { date: 'Oct 15', title: 'Pumpkin Festival', location: 'Community Park' },
+      { date: 'Oct 31', title: 'Halloween Dance', location: 'Community Hall' }
+    ]
+  };
+
+  function showEvents() {
+    const month = document.getElementById('monthSelect').value;
+    const eventList = document.getElementById('eventList');
+    eventList.innerHTML = '';
+
+    if(events[month]) {
+      events[month].forEach(event => {
+        const p = document.createElement('p');
+        p.textContent = `${event.date}: ${event.title} — ${event.location}`;
+        eventList
