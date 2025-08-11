@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -55,72 +55,34 @@
     border-bottom: 3px solid #b8860b;
     padding-bottom: 5px;
   }
-  p {
-    font-size: 1.1em;
-  }
   ul {
-    list-style-type: disc;
+    list-style-type: none;
     padding-left: 20px;
   }
   li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 1.1em;
-  }
-  a.document-link {
-    color: #800000;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  a.document-link:hover {
-    color: #b8860b;
-  }
-  /* Folder tree styles */
-  ul.folder, ul.folder ul {
-    list-style-type: none;
-    padding-left: 20px;
     cursor: pointer;
   }
-  ul.folder ul {
-    display: none; /* hide nested by default */
+  li span {
+    user-select: none;
   }
-  li.folder > span {
-    font-weight: bold;
-    position: relative;
-    padding-left: 20px;
+  .folder > ul {
+    margin-left: 20px;
+    display: none;
   }
-  li.folder > span::before {
-    content: "▶";
-    position: absolute;
-    left: 0;
-    top: 0;
+  .folder.open > ul {
+    display: block;
+  }
+  .folder > span::before {
+    content: "▶ ";
     color: #b8860b;
-    transition: transform 0.2s ease;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
   }
-  li.folder.expanded > span::before {
-    transform: rotate(90deg);
-  }
-  li.folder > ul {
-    margin-top: 5px;
-  }
-  li.year-folder > span {
-    font-style: italic;
-    color: #804000;
-    cursor: default;
-    padding-left: 20px;
-  }
-  li.year-folder > span:hover {
-    text-decoration: none;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-    header {
-      font-size: 2.5em;
-    }
+  .folder.open > span::before {
+    content: "▼ ";
   }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet" />
@@ -141,135 +103,122 @@
 </nav>
 <main>
   <h2>Town Documents</h2>
-  <p>Below you can find important documents related to Waterfield’s zoning ordinances, governing system, and other official materials.</p>
-  <ul>
-    <li><a class="document-link" href="docs/zoning_ordinance.pdf" target="_blank" rel="noopener noreferrer">Zoning Ordinance (PDF)</a></li>
-    <li><a class="document-link" href="docs/governing_system.pdf" target="_blank" rel="noopener noreferrer">Town Governing System (PDF)</a></li>
-    <li><a class="document-link" href="docs/town_meeting_minutes.pdf" target="_blank" rel="noopener noreferrer">Recent Town Meeting Minutes (PDF)</a></li>
-  </ul>
+  <p>Below you can explore folders with Waterfield’s official documents organized by category and year.</p>
 
-  <h2>Folder View</h2>
   <ul class="folder">
 
-    <!-- City of Waterfield Meeting Minutes -->
     <li class="folder">
       <span>City of Waterfield Meeting Minutes</span>
       <ul>
         <li class="folder">
           <span>Senate Meeting Minutes</span>
           <ul>
-            <li class="year-folder"><span>2025</span></li>
-            <li class="year-folder"><span>2026</span></li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
         <li class="folder">
           <span>House Meeting Minutes</span>
           <ul>
-            <li class="year-folder"><span>2025</span></li>
-            <li class="year-folder"><span>2026</span></li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
         <li class="folder">
           <span>City Trustee Meeting Minutes</span>
           <ul>
-            <li class="year-folder"><span>2025</span></li>
-            <li class="year-folder"><span>2026</span></li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
         <li class="folder">
           <span>Fairs and Festival Meeting Minutes</span>
           <ul>
-            <li class="year-folder"><span>2025</span></li>
-            <li class="year-folder"><span>2026</span></li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
         <li class="folder">
           <span>Senate Committee Meeting Minutes</span>
           <ul>
-            <li class="year-folder"><span>2025</span></li>
-            <li class="year-folder"><span>2026</span></li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
         <li class="folder">
           <span>House Committee Meeting Minutes</span>
           <ul>
-            <li class="year-folder"><span>2025</span></li>
-            <li class="year-folder"><span>2026</span></li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
         <li class="folder">
           <span>City Trustee Committee Meeting Minutes</span>
           <ul>
-            <li class="year-folder"><span>2025</span></li>
-            <li class="year-folder"><span>2026</span></li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
       </ul>
     </li>
 
-    <!-- Town Ordinance -->
     <li class="folder">
       <span>Town Ordinance</span>
       <ul>
-        <li class="year-folder"><span>2025</span></li>
-        <li class="year-folder"><span>2026</span></li>
+        <li>2025</li>
+        <li>2026</li>
       </ul>
     </li>
 
-    <!-- Town Governing System -->
     <li class="folder">
       <span>Town Governing System</span>
       <ul>
-        <li class="year-folder"><span>2025</span></li>
-        <li class="year-folder"><span>2026</span></li>
+        <li>2025</li>
+        <li>2026</li>
       </ul>
     </li>
 
-    <!-- Zoning Ordinance -->
     <li class="folder">
       <span>Zoning Ordinance</span>
       <ul>
-        <li class="year-folder"><span>2025</span></li>
-        <li class="year-folder"><span>2026</span></li>
+        <li>2025</li>
+        <li>2026</li>
       </ul>
     </li>
 
-    <!-- Zoning Map -->
     <li class="folder">
       <span>Zoning Map</span>
       <ul>
-        <li class="year-folder"><span>2025</span></li>
-        <li class="year-folder"><span>2026</span></li>
+        <li>2025</li>
+        <li>2026</li>
       </ul>
     </li>
 
-    <!-- District Map -->
     <li class="folder">
       <span>District Map</span>
       <ul>
         <li class="folder">
           <span>House of Representatives</span>
           <ul>
-            <li class="year-folder"><span>2025</span></li>
-            <li class="year-folder"><span>2026</span></li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
         <li class="folder">
           <span>Senate</span>
           <ul>
-            <li class="year-folder"><span>2025</span></li>
-            <li class="year-folder"><span>2026</span></li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
       </ul>
     </li>
 
-    <!-- Town Map -->
     <li class="folder">
       <span>Town Map</span>
       <ul>
-        <li class="year-folder"><span>2025</span></li>
-        <li class="year-folder"><span>2026</span></li>
+        <li>2025</li>
+        <li>2026</li>
       </ul>
     </li>
 
@@ -277,15 +226,11 @@
 </main>
 
 <script>
-  // Folder toggle functionality
-  document.querySelectorAll('li.folder > span').forEach(span => {
+  // Add toggle functionality for folders
+  document.querySelectorAll('.folder > span').forEach(span => {
     span.addEventListener('click', () => {
-      const li = span.parentElement;
-      li.classList.toggle('expanded');
-      const nestedUl = li.querySelector('ul');
-      if (nestedUl) {
-        nestedUl.style.display = li.classList.contains('expanded') ? 'block' : 'none';
-      }
+      const parentLi = span.parentElement;
+      parentLi.classList.toggle('open');
     });
   });
 </script>
