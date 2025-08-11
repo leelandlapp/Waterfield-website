@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Employment Opportunities</title>
+<title>Employment Opportunities - Waterfield</title>
 <style>
   body {
     font-family: 'Georgia', serif;
     background-color: #fff8e1;
     color: #800000;
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   header {
     background-color: #b8860b;
@@ -20,71 +22,145 @@
     color: white;
     text-shadow: 1px 1px 2px #400000;
     width: 100%;
+  }
+  nav {
+    background: #800000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
     box-sizing: border-box;
   }
+  nav a, nav .dropbtn {
+    color: #ffd700;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+  }
+  nav a:hover, nav .dropbtn:hover {
+    background-color: #ffd700;
+    color: #800000;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #800000;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: column;
+  }
+  .dropdown-content a {
+    color: #ffd700;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    font-family: 'Arial Black', sans-serif;
+  }
+  .dropdown-content a:hover {
+    background-color: #ffd700;
+    color: #800000;
+  }
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
   main {
+    padding: 30px;
     max-width: 900px;
     margin: auto;
-    padding: 30px;
   }
-  h1 {
+  h2 {
     font-family: 'Lobster', cursive;
-    font-size: 2.2em;
+    font-size: 2em;
     color: #b8860b;
-    border-bottom: 3px solid #b8860b;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
-  p, ul {
-    line-height: 1.6;
-    font-size: 1.1em;
   }
   ul {
-    margin-left: 20px;
+    line-height: 1.6;
   }
   footer {
-    background: #800000;
+    background-color: #800000;
     color: #ffd700;
     text-align: center;
     padding: 15px;
-    font-family: 'Georgia', serif;
+    font-family: Georgia, serif;
     font-size: 0.9em;
     margin: 0;
     line-height: 1.4;
+    box-sizing: border-box;
+  }
+  footer a {
+    color: #ffd700;
+    text-decoration: underline;
+  }
+  footer a:hover {
+    color: #fff3b0;
+  }
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      font-size: 2.5em;
+    }
   }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet" />
 </head>
 <body>
-<header>Waterfield Government</header>
+
+<header>Employment Opportunities</header>
+
+<nav>
+  <a href="index.html">Home</a>
+
+  <div class="dropdown">
+    <a href="about.html" class="dropbtn">About ▼</a>
+    <div class="dropdown-content">
+      <a href="about.html">About Waterfield</a>
+      <a href="employment.html">Employment Opportunities</a>
+    </div>
+  </div>
+
+  <a href="government.html">Government</a>
+  <a href="events.html">Events</a>
+  <a href="schools.html">Schools</a>
+  <a href="business.html">Business</a>
+  <a href="tourism.html">Tourism</a>
+  <a href="community.html">Community</a>
+  <a href="documents.html">Documents</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
 <main>
-  <h1>Employment Opportunities</h1>
-  <p>Waterfield is committed to building a strong, skilled workforce to serve our growing community. Explore the latest job openings below and learn how to apply.</p>
-  
+  <h2>Join Our Community</h2>
+  <p>Waterfield is growing and we’re always looking for talented and dedicated individuals to join our team. Whether you’re interested in public service, local businesses, education, or community development, there are many opportunities here.</p>
+
   <h2>Current Openings</h2>
   <ul>
-    <li><strong>Administrative Assistant</strong> — Full-time, Village Hall</li>
-    <li><strong>Public Works Technician</strong> — Full-time, Department of Public Works</li>
-    <li><strong>Police Officer</strong> — Full-time, Waterfield Police Department</li>
-    <li><strong>Firefighter (Volunteer)</strong> — Volunteer, Waterfield Fire Department</li>
-    <li><strong>Parks Maintenance Worker</strong> — Part-time, Parks and Recreation</li>
+    <li><strong>Public Works Laborer:</strong> Full-time, responsible for maintaining roads, parks, and public facilities. Experience preferred but not required.</li>
+    <li><strong>Police Officer:</strong> Entry-level and experienced positions available. Must meet state certification requirements.</li>
+    <li><strong>Administrative Assistant:</strong> Support village government offices with clerical duties. Strong organizational skills required.</li>
+    <li><strong>Event Coordinator:</strong> Plan and manage festivals, fairs, and community events throughout the year.</li>
   </ul>
-  
+
   <h2>How to Apply</h2>
-  <p>Please submit your resume and cover letter via email to <a href="mailto:hr@waterfieldmi.gov">hr@waterfieldmi.gov</a>. For more information, call (555) 123-4567.</p>
-  
-  <h2>Benefits</h2>
-  <ul>
-    <li>Competitive salaries</li>
-    <li>Health and dental insurance</li>
-    <li>Retirement plans</li>
-    <li>Paid time off and holidays</li>
-    <li>Opportunities for professional development</li>
-  </ul>
+  <p>Send your resume and cover letter to <a href="mailto:jobs@waterfieldmi.gov">jobs@waterfieldmi.gov</a> or visit the Village Hall at 123 Main Street for an application.</p>
 </main>
+
 <footer>
-  Contact us: <a href="mailto:info@waterfieldmi.gov" style="color:#ffd700; text-decoration: underline;">info@waterfieldmi.gov</a> | Phone: (555) 123-4567<br />
+  Contact us: <a href="mailto:info@waterfieldmi.gov">info@waterfieldmi.gov</a> | Phone: (555) 123-4567<br />
   &copy; 2025 Waterfield, Michigan. All rights reserved.
 </footer>
+
 </body>
 </html>
+
