@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -85,7 +85,7 @@
     font-weight: bold;
     border-radius: 5px;
     text-decoration: none;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   a.document-link:hover {
     background: #800000;
@@ -109,6 +109,7 @@
   <a href="documents.html">Documents</a>
   <a href="contact.html">Contact</a>
 </nav>
+
 <main>
   <h2>Town Documents</h2>
 
@@ -123,20 +124,11 @@
   <ul>
     <li class="folder"><span>City of Waterfield Meeting Minutes</span>
       <ul>
-
         <!-- Senate Meeting Minutes -->
         <li class="folder"><span>Senate Meeting Minutes</span>
           <ul>
-            <li>
-              <a href="docs/Senate_Meeting_Minutes_2025.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2025 Senate Meeting Minutes (PDF)
-              </a>
-            </li>
-            <li>
-              <a href="docs/Senate_Meeting_Minutes_2026.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2026 Senate Meeting Minutes (PDF)
-              </a>
-            </li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
 
@@ -155,9 +147,7 @@
             <li class="folder"><span>2026</span>
               <ul>
                 <li>
-                  <a href="docs/House_Meeting_Minutes_2026.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                    House Meeting Minutes - 2026 (PDF)
-                  </a>
+                  <!-- Add future 2026 documents here -->
                 </li>
               </ul>
             </li>
@@ -167,86 +157,51 @@
         <!-- City Trustee Meeting Minutes -->
         <li class="folder"><span>City Trustee Meeting Minutes</span>
           <ul>
-            <li>
-              <a href="docs/City_Trustee_Minutes_2025.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2025 City Trustee Meeting Minutes (PDF)
-              </a>
-            </li>
-            <li>
-              <a href="docs/City_Trustee_Minutes_2026.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2026 City Trustee Meeting Minutes (PDF)
-              </a>
-            </li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
 
         <!-- Fairs and Festival Meeting Minutes -->
         <li class="folder"><span>Fairs and Festival Meeting Minutes</span>
           <ul>
-            <li>
-              <a href="docs/Fairs_Festival_Minutes_2025.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2025 Fairs and Festival Minutes (PDF)
-              </a>
-            </li>
-            <li>
-              <a href="docs/Fairs_Festival_Minutes_2026.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2026 Fairs and Festival Minutes (PDF)
-              </a>
-            </li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
 
         <!-- Senate Committee Meeting Minutes -->
         <li class="folder"><span>Senate Committee Meeting Minutes</span>
           <ul>
-            <li>
-              <a href="docs/Senate_Committee_Minutes_2025.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2025 Senate Committee Minutes (PDF)
-              </a>
-            </li>
-            <li>
-              <a href="docs/Senate_Committee_Minutes_2026.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2026 Senate Committee Minutes (PDF)
-              </a>
-            </li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
 
         <!-- House Committee Meeting Minutes -->
         <li class="folder"><span>House Committee Meeting Minutes</span>
           <ul>
-            <li>
-              <a href="docs/House_Committee_Minutes_2025.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2025 House Committee Minutes (PDF)
-              </a>
-            </li>
-            <li>
-              <a href="docs/House_Committee_Minutes_2026.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2026 House Committee Minutes (PDF)
-              </a>
-            </li>
+            <li>2025</li>
+            <li>2026</li>
           </ul>
         </li>
 
         <!-- City Trustee Committee Meeting Minutes -->
         <li class="folder"><span>City Trustee Committee Meeting Minutes</span>
           <ul>
+            <li>2025</li>
             <li>
-              <a href="docs/City_Trustee_Committee_Minutes_2025.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2025 City Trustee Committee Minutes (PDF)
+              <a href="docs/City_Trustee_Minutes_August_1_2025.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
+                City Trustee Committee Meeting Minutes - August 1, 2025 (PDF)
               </a>
             </li>
-            <li>
-              <a href="docs/City_Trustee_Committee_Minutes_2026.pdf" target="_blank" rel="noopener noreferrer" class="document-link">
-                2026 City Trustee Committee Minutes (PDF)
-              </a>
-            </li>
+            <li>2026</li>
           </ul>
         </li>
-
       </ul>
     </li>
 
+    <!-- Other Documents -->
     <li class="folder"><span>Town Ordinance</span></li>
     <li class="folder"><span>Town Governing System</span></li>
     <li class="folder"><span>Zoning Ordinance</span></li>
@@ -267,6 +222,7 @@
 </footer>
 
 <script>
+  // Folder toggle functionality
   document.querySelectorAll('.folder > span').forEach(span => {
     span.addEventListener('click', () => {
       span.parentElement.classList.toggle('open');
